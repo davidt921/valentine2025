@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kartu Valentine - Input Password Angka</title>
+   
+    <link href="css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="card">
+        <h1>💖 Kartu Valentine 💖</h1>
+        <p>Masukkan Password Angka Anda:</p>
+        <input type="text" id="password"  placeholder="Ketik password Anda" maxlength="4" readonly />
+        <div class="row">
+
+    
+            <div class="col">
+                <img alt="cityscape" class="w-32 h-32 rounded-lg mr-4 fotodepan" height="150" src="https://storage.googleapis.com/a1aa/image/q6-TJasjo8HQ7qsiKBIbyi6osDmdam1jI36xJqT281k.jpg" width="305"/>
+            </div>
+            <div class="col">
+                <div class="keypad">
+                    <button class="key" data-value="1">1</button>
+                    <button class="key" data-value="2">2</button>
+                    <button class="key" data-value="3">3</button>
+                    <button class="key" data-value="4">4</button>
+                    <button class="key" data-value="5">5</button>
+                    <button class="key" data-value="6">6</button>
+                    <button class="key" data-value="7">7</button>
+                    <button class="key" data-value="8">8</button>
+                    <button class="key" data-value="9">9</button>
+                    <button class="key" data-value="0">0</button>
+                    <button class="key" id="clear">C</button>
+                    <button class="key" id="submit">Kirim</button>
+                </div>
+        </div>
+        </div>
+        <p id="message"></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

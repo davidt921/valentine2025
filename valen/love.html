@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Day Card</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #ffcccb;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+        }
+        .card {
+            background-color: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            width: 350px;
+        }
+        h1 {
+            color: #e63946;
+        }
+        .countdown {
+            font-size: 24px;
+            color: #f1faee;
+            background-color: #e63946;
+            padding: 10px;
+            border-radius: 10px;
+            margin-top: 5px;
+            margin-bottom: 20px;
+        }
+        .heart {
+            font-size: 50px;
+            color: #e63946;
+        }
+
+        .icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .icon {
+            font-size: 40px;
+            color: #e63946;
+            transition: transform 0.3s;
+        }
+        .icon:hover {
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <h1>Happy Valentine's Day!</h1>
+    <div class="heart">❤️</div>
+    <p>Wow, we already have :</p>
+    <div class="countdown" id="countdown"></div>
+    <p> I guess that means you’re stuck with me for the next 9,999,999,999 days—no refunds!"</p>
+
+    <div class="icons">
+        <div class="icon"><a href="chat.html"><i class="fa-solid fa-comment" style="
+    color: #e63946"></i></a></div>
+        <div class="icon"><a href="album.html"><i class="fa-solid fa-camera" style="
+    color: #e63946"></i></a></div>
+        <!-- <div class="icon"><i class="fa-solid fa-plane"></i></div>
+        <div class="icon"><i class="fas fa-heart"></i></div> -->
+    </div>
+</div>
+
+<script>
+    // Set the date we're counting down to
+    const countDownDate = new Date("August 27, 2023 00:00:00").getTime();
+
+    // Update the countdown every 1 second
+    const x = setInterval(function() {
+        // Get today's date and time
+        const now = new Date().getTime();
+
+        // Find the distance between now and the count down date
+        const distance = now - countDownDate;
+
+        // Time calculations for days, hours, minutes and seconds
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        // Display the result in the countdown element
+        document.getElementById("countdown").innerHTML = days + " Days " + hours + " Hours <br>"
+        + minutes + " Minutes " + seconds + " Seconds" + "<br> together!";
+
+        // If the countdown is over, display a message
+        if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("countdown").innerHTML = "Happy Valentine's Day!";
+        }
+    }, 1000);
+</script>
+
+</body>
+</html>
